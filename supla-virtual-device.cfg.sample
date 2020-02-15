@@ -1,0 +1,17 @@
+[SERVER]
+host=svrX.supla.org
+
+[LOCATION]
+ID=
+PASSWORD=
+
+[CHANNEL_0]
+type=TEMPERATURE_AND_HUMIDITY
+file=/home/pi/supla-filesensors/var/livingroom_temperature.txt
+
+[CHANNEL_1]
+type=TEMPERATURE
+file=/home/pi/supla-filesensors/var/raspberry_sdcard_free.txt
+min_interval_sec=300
+
+# this is a comment
