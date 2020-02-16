@@ -5,13 +5,50 @@ host=svrX.supla.org
 ID=
 PASSWORD=
 
+[MQTT]
+host=mqtt.host
+port=1883
+username=
+password=
+
 [CHANNEL_0]
-type=TEMPERATURE_AND_HUMIDITY
+function=TEMPERATURE_AND_HUMIDITY
 file=/home/pi/supla-filesensors/var/livingroom_temperature.txt
 
 [CHANNEL_1]
-type=TEMPERATURE
+function=TEMPERATURE
 file=/home/pi/supla-filesensors/var/raspberry_sdcard_free.txt
 min_interval_sec=300
+
+# example of getting payload switch 0/1 value
+
+[CHANNEL_2]
+function=POWERSWITCH
+state_topic=relays/switch/0/state
+command_topic=relays/switch/0/command
+command_template=$value$
+payload_on=1
+payload_off=1
+
+# example of getting payload dot separated temp and humidity value
+# example 25.4 78
+
+[CHANNEL_3]
+function=TEMPERATURE_AND_HUMIDITY
+state_topic=sensors/temphum/0/state
+
+# example of parsing json payload { "on": true }
+
+[CHANNEL_4]
+function=LIGHTSWITCH
+state_topic=relays/lightbulb/1/state
+command_topic=relays/lightbulb/1/command
+payload_value=/on
+payload_on=true
+payload_off=false
+
+[CHANNEL_5]
+function=WINDSENSOR
+state_topic=sensors/wind/0/state
 
 # this is a comment
