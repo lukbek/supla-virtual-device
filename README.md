@@ -84,6 +84,56 @@ state_topic=sensors/temp/kitchen/state
 
 # Sensors with data from MQTT (Json)
 ```
-[
+[CHANNEL_X]
+function=TEMPERATURE
+state_topic=sensors/temp/kitchen/state
+payload_value=/data/temp
+```
+
+* `payload_value`: [`JSONPointer`](https://tools.ietf.org/html/rfc6901) to the value in JSON payload 
+   example above assumes that payload will look like {"data": { "temp": 23.5 } }
+
+# Executing system command
+```
+[CHANNEL_X]
+function=GATEWAYLOCK
+command=echo 'Hello World' >> helloworld.txt
+```
+* `command`: system command that will be executed on switch value changed
+   example above is working with monostable button 
+```
+[CHANNEL_X]
+function=POWERSWITCH
+command_on=echo 'Power On!' >> power.txt
+command_off=echo 'Power Off!' >> power.txt
+```
+* `command_on`: system command that will be executed when channel value change to 1
+* `command_off`: system command that will be executed when channel value change to 0
+
+# Publishing MQTT device command
+```
+[CHANNEL_X]
+function=POWERSWITCH
+state_topic=switch/kitchen/state
+payload_on=1
+payload_off=0
+command_topic=switch/kitchen/command
+command_template=$value$
+```
+* `command_topic`: MQTT publish topic
+* `command_template`: MQTT payload $value$ will be replaced with channel current value
+* `payload_on`: value template that means channel on value
+* `payload_off`: value template that means channel off value
+
+
+
+
+
+
+
+
+
+
+
 
 
