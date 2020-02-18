@@ -1,5 +1,9 @@
+[GLOBAL]
+device_name=SUPLA VIRTUAL DEVICE
+
 [SERVER]
 host=svrX.supla.org
+protocl_version=10
 
 [LOCATION]
 ID=
@@ -10,6 +14,7 @@ host=mqtt.host
 port=1883
 username=
 password=
+client_name=supla-virtual-device
 
 [CHANNEL_0]
 function=TEMPERATURE_AND_HUMIDITY
