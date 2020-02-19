@@ -76,6 +76,35 @@ min_interval_sec=300
   file; it is optional with a default value of `10` (seconds); if the measurement does not change often, it's
   good idea to set a bigger value not to stress your sd card with too many reads
 
+# Supported functions
+* TEMPERATURE
+* GATEWAYLOCK
+* GATE
+* GARAGEDOOR
+* HUMIDITY
+* TEMPERATURE_AND_HUMIDITY
+* GATEWAYSENSOR
+* GATESENSOR
+* GARAGE_DOOR_SENSOR
+* NOLIQUID
+* DOORLOCK
+* DOORLOCKSENSOR
+* ROLLERSHUTTER
+* ROLLERSHUTTERSENSOR
+* POWERSWITCH
+* LIGHTSWITCH
+* DEPTHSENSOR
+* DISTANCESENSOR
+* WINDOWSENSOR
+* PRESSURESENSOR
+* RAINSENSOR
+* WEIGHTSENSOR
+* STAIRCASETIMER
+* WINDSENSOR
+* MAILSENSOR
+	
+
+
 # Sensors with data from MQTT (Raw data)
 ```
 [CHANNEL_X]
