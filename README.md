@@ -2,6 +2,9 @@
 
 This is a fork of [`supla-dev`](https://github.com/SUPLA/supla-core/tree/master/supla-dev) and evolution of [`supla-filesensors`](https://github.com/fracz/supla-filesensors) that is able to read measurement values from files or MQTT and send them to the SUPLA, so you can display them in the app, create direct links etc. You can create buttons and perform actions such as publishing messages to MQTT or executing system commands via the SUPLA application.
 
+<b>Your are using this software for your own risk. Please don't rely on it if it comes to a life danger situation.</b>
+
+
 This software can be used to connect hardware with non-SUPLA firmware to SUPLA Cloud as well as supply SUPLA with data from websites and files.
 
 If you want to use it, you can have your SUPLA account on official public `cloud.supla.org` service or private one, 
@@ -125,6 +128,9 @@ command_template=$value$
 * `payload_on`: value template that means channel on value
 * `payload_off`: value template that means channel off value
 
+# Support 
+
+Feel free to ask on [`SUPLA's forum`](https://forum.supla.org/viewtopic.php?f=9&t=6189) for this software and report issues on github.
 
 
 
