@@ -1,10 +1,10 @@
 [GLOBAL]
 device_name=SUPLA VIRTUAL DEVICE
-protocol_version=10
+
 
 [SERVER]
 host=svrX.supla.org
-
+protocol_version=10
 
 [LOCATION]
 ID=
