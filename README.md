@@ -1,5 +1,7 @@
 # SUPLA VIRTUAL-DEVICE
 
+![supla-virtual-device](https://github.com/lukbek/supla-core/workflows/supla-virtual-device/badge.svg?branch=supla-mqtt-dev)
+
 This is a fork of [`supla-dev`](https://github.com/SUPLA/supla-core/tree/master/supla-dev) and evolution of [`supla-filesensors`](https://github.com/fracz/supla-filesensors) that is able to read measurement values from files or MQTT and send them to the SUPLA, so you can display them in the app, create direct links etc. You can create buttons and perform actions such as publishing messages to MQTT or executing system commands via the SUPLA application.
 
 <b>Your are using this software for your own risk. Please don't rely on it if it comes to a life danger situation.</b>
