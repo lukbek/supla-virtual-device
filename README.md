@@ -68,7 +68,8 @@ following the template:
 [CHANNEL_X]
 function=TEMPERATURE
 file=/home/pi/supla-filesensors/var/raspberry_sdcard_free.txt
-min_interval_sec=300
+min_interval_sec=30
+file_write_check_sec=600
 ```
 
 * `CHANNEL_X` should be the next integer, starting from 0, e.g. `CHANNEL_0`, `CHANNEL_1`, ..., `CHANNEL_9`
@@ -77,7 +78,7 @@ min_interval_sec=300
 * `min_interval_sec` is a suggestion for the program of how often it should check for new measurements in the
   file; it is optional with a default value of `10` (seconds); if the measurement does not change often, it's
   good idea to set a bigger value not to stress your sd card with too many reads
-
+* `file_write_check_sec` is the time when file should be written by external sensor. If is not, an error is raised and    default values sended to the Supla server
 # Sensors with data from MQTT (Raw data)
 ```
 [CHANNEL_X]
