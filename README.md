@@ -93,8 +93,8 @@ So, for all channels that expect only one value (e.g. `TEMPERATURE`) it should b
 For the `TEMPERATURE_AND_HUMIDITY` which expects two values, put them in separate lines, e.g.:
 
 ```
-88.23
 13.2918
+88.23
 ```
 
 That's it. Now, it's your job to fill these files with something interesting :-)
