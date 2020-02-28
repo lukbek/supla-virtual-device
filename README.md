@@ -97,6 +97,8 @@ For the `TEMPERATURE_AND_HUMIDITY` which expects two values, put them in separat
 88.23
 ```
 
+For the other sensors like NOLIQUID or relay it should have one linę with 0/1 value
+
 That's it. Now, it's your job to fill these files with something interesting :-)
 
 
