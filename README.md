@@ -67,7 +67,7 @@ following the template:
 ```
 [CHANNEL_X]
 function=TEMPERATURE
-file=/home/pi/supla-filesensors/var/raspberry_sdcard_free.txt
+file=/home/pi/supla-virtual-device/var/raspberry_sdcard_free.txt
 min_interval_sec=30
 file_write_check_sec=600
 ```
@@ -131,18 +131,38 @@ command_template=$value$
 * `payload_on`: value template that means channel on value
 * `payload_off`: value template that means channel off value
 
+# Autostarting
+
+Autostart configuration is just the same as the [`supla-dev`](https://github.com/SUPLA/supla-core/tree/master/supla-dev#supervisor) instructions.
+It's good idea to configure it so `supla-virtual-device` starts automatically after your machine boots.
+Execute the steps from the instructions there, but provide process configuration for the `supla-virtual-device`:
+
+```
+[program:supla-virtual-device]
+command=/home/pi/supla-virtual-device/supla-virtual-device
+directory=/home/pi/supla-virtual-device
+autostart=true
+autorestart=true
+user=pi
+```
+
+### Start, stop, restart
+
+Just like for the [`supla-dev`](https://github.com/SUPLA/supla-core/tree/master/supla-dev#managing-the-process-with-supervisor)
+
+```
+supervisorctl status
+supervisorctl stop supla-virtual-device
+supervisorctl start supla-virtual-device
+supervisorctl restart supla-virtual-device
+supervisorctl tail supla-virtual-device
+```
+
+# Where are the sources?
+
+If you want to see the sources of this project, check out the 
+[`supla-mqtt-dev` branch on mine `supla-core`'s fork](https://github.com/lukbek/supla-core/tree/supla-mqtt-dev).
+
 # Support 
 
 Feel free to ask on [`SUPLA's forum`](https://forum.supla.org/viewtopic.php?f=9&t=6189) for this software and report issues on github.
-
-
-
-
-
-
-
-
-
-
-
-
