@@ -79,6 +79,27 @@ file_write_check_sec=600
   file; it is optional with a default value of `10` (seconds); if the measurement does not change often, it's
   good idea to set a bigger value not to stress your sd card with too many reads
 * `file_write_check_sec` is the time when file should be written by external sensor. If is not, an error is raised and    default values sended to the Supla server
+
+## What the file with a measurement should look like?
+
+It should just contain the value(s) to send to the SUPLA.
+
+So, for all channels that expect only one value (e.g. `TEMPERATURE`) it should be just number, e.g.
+
+```
+13.64
+```
+
+For the `TEMPERATURE_AND_HUMIDITY` which expects two values, put them in separate lines, e.g.:
+
+```
+88.23
+13.2918
+```
+
+That's it. Now, it's your job to fill these files with something interesting :-)
+
+
 # Sensors with data from MQTT (Raw data)
 ```
 [CHANNEL_X]
