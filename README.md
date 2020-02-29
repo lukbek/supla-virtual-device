@@ -61,7 +61,20 @@ you must fill MQTT section fields like `host`, `port` and if used `username` and
 After successful lauch of the `supla-virtual-device` it will create a device in that location.
 
 Then you can put as many channels in this virtual device as you wish, 
-following the template:
+following the template.
+
+## Adding, removing and changing channels
+
+You can add channels to the `supla-virtual-device.cfg`. After you restart the program, they will 
+be added to the device.
+
+However, you can neither remove channels nor change their types becuase SUPLA will refuse to accept
+such device with *Channels conflict* message. After such change, you need to stop `supla-virtual-device`,
+remove the device from the SUPLA Cloud and then run it again. A new device with the new channels
+will be registered.
+
+This is a result of a design decision that SUPLA should never remove or change channels based on
+the data received from the device, as it might result in data loss caused by e.g. some device software bug.
 
 # Sensors with data from file
 ```
