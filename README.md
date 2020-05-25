@@ -135,6 +135,23 @@ payload_value=/data/temp
 * `payload_value`: [`JSONPointer`](https://tools.ietf.org/html/rfc6901) to the value in JSON payload 
    example above assumes that payload will look like {"data": { "temp": 23.5 } }
 
+# Sensors with multiple data on one topic (Json)
+[CHANNEL_X]
+function=TEMPERATURE
+state_topic=sensors/temp/kitchen/state
+payload_value=/data/temp
+id_template=/data/id
+id_value=sensor_1
+```
+
+* `payload_value`: [`JSONPointer`](https://tools.ietf.org/html/rfc6901) to the value in JSON payload 
+   example above assumes that payload will look like {"data": { "temp": 23.5 } }
+* `id_template`:  [`JSONPointer`](https://tools.ietf.org/html/rfc6901) to the value in JSON payload 
+   where sensor identifier is present
+* `id_value`: sensor's identifier
+
+When id_template and id_value are used SVD tries to get identifier speciefied by id_template from message payload and compares it to provided id_value. If those are not the same program does not perform action on channel
+
 # Executing system command
 ```
 [CHANNEL_X]
