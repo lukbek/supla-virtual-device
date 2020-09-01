@@ -4,11 +4,10 @@ device_name=SUPLA VIRTUAL DEVICE
 
 [SERVER]
 host=svrX.supla.org
-protocol_version=10
+protocol_version=12
 
-[LOCATION]
-ID=
-PASSWORD=
+[AUTH]
+email=
 
 [MQTT]
 host=mqtt.host
